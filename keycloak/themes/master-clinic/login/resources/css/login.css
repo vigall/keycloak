@@ -1,0 +1,191 @@
+/* Master Clinic - Professional Login Theme - Final Refinement with BG */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --mc-primary: #2D5A4C; 
+    --mc-secondary: #7EB09B;
+    --mc-bg-overlay: rgba(240, 242, 245, 0.85);
+    --mc-text: #1E293B;
+    --mc-text-light: #64748B;
+    --mc-white: #FFFFFF;
+    --mc-border: #E2E8F0;
+    --mc-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Reset and Global Styles with Background Image */
+body, .pf-v5-c-login, .pf-v5-c-page {
+    background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    font-family: 'Inter', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+    position: relative !important;
+}
+
+/* Background Overlay for Contrast */
+body::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(45, 90, 76, 0.7) 0%, rgba(240, 242, 245, 0.6) 100%) !important;
+    z-index: 0 !important;
+}
+
+/* Keycloak v2 PatternFly overrides and Unwanted Blocks */
+.pf-v5-c-login__header, 
+#kc-header, 
+.pf-v5-c-login__main-header,
+#kc-username,
+.pf-v5-c-login__main-header-utilities { 
+    display: none !important; 
+}
+.pf-v5-c-login::before { display: none !important; }
+
+/* The Professional Card - Higher Z-Index */
+.pf-v5-c-login__main {
+    position: relative !important;
+    z-index: 1 !important;
+    background: var(--mc-white) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--mc-shadow) !important;
+    border: 1px solid var(--mc-border) !important;
+    border-top: 6px solid var(--mc-primary) !important;
+    padding: 48px !important;
+    width: 460px !important;
+    max-width: 95vw !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+}
+
+/* Ensure single column flow inside PatternFly containers */
+.pf-v5-c-login__main-header, .pf-v5-c-login__main-body, .pf-v5-c-login__main-footer {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Header Section with Brand */
+.mc-header-section {
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.mc-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.mc-logo-svg {
+    width: 44px;
+    height: 44px;
+}
+
+.mc-logo-text {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--mc-primary);
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+
+.master-clinic-info {
+    color: var(--mc-text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Titles */
+#kc-page-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--mc-text) !important;
+    margin: 24px 0 20px 0 !important;
+    text-align: center !important;
+}
+
+/* Labels and Inputs */
+.pf-v5-c-form__group-label {
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+    color: var(--mc-text) !important;
+    display: block !important;
+}
+
+.pf-v5-c-form-control {
+    background-color: #F8FAFC !important;
+    border: 1px solid var(--mc-border) !important;
+    border-radius: 8px !important;
+    height: 48px !important;
+    padding: 0 16px !important;
+    font-size: 1rem !important;
+}
+
+.pf-v5-c-form-control:focus {
+    border-color: var(--mc-primary) !important;
+    box-shadow: 0 0 0 4px rgba(45, 90, 76, 0.1) !important;
+}
+
+/* Login Button */
+#kc-login {
+    background-color: var(--mc-primary) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    height: 52px !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+    font-size: 1rem !important;
+    transition: background-color 0.2s;
+}
+
+#kc-login:hover {
+    background-color: #1E3D33 !important;
+}
+
+/* Footer & Link */
+.mc-footer-links {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--mc-border);
+    text-align: center;
+    width: 100%;
+}
+
+.master-clinic-test-link {
+    display: inline-block;
+    color: var(--mc-primary) !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 8px;
+    padding: 10px 20px;
+    border: 2px solid var(--mc-primary);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.master-clinic-test-link:hover {
+    background-color: var(--mc-primary);
+    color: white !important;
+}
+
+#kc-registration {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
