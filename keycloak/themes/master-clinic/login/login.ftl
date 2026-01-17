@@ -90,7 +90,7 @@
                 </div>
             </#if>
             
-            <a href="https://www.google.com" class="master-clinic-test-link" target="_blank">
+            <a href="https://master-clinic-landing-page-latest.onrender.com/" class="master-clinic-test-link" target="_blank">
                 Interessado em transformar a gestão da sua clínica? Conheça mais.
             </a>
           </div>
